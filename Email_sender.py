@@ -9,15 +9,16 @@ can format the email with the usual f'{}
 
 #html = Template(Path('index.html').read_text())
 email = EmailMessage()
-email['from'] = 'benchwarmer_5@hotmail.com'
-email['to'] = 'adavisla@uark.edu'
-email['subject'] = 'Possible Job Offer'
+email['from'] = ## Enter Email here from sender
+email['to'] = ## Enter Email Address to receiver
+email['subject'] = ## Enter Subject line
 
-email.set_content(' I was reaching out to you in regards to a possible job opportunity hit me up please' )
+email.set_content ## Enter content of message
 
+## Whatever Email Smtp protocol for email domain. and port number used.
 with smtplib.SMTP(host='smtp-mail.outlook.com', port=587) as smtp:
   smtp.ehlo()
   smtp.starttls()
-  smtp.login('benchwarmer_5@hotmail.com', 'KAPPa353!')
+  smtp.login ## Enter login details for email address
   smtp.send_message(email)
   print('all good boss!')
