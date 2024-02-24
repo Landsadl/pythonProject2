@@ -8,7 +8,7 @@ def fib(number):
         b = temp + a
 
 
-for x in fib(21):
+for x in fib(23):
     print(x)
 
 '''
